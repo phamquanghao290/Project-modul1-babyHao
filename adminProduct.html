@@ -1,0 +1,180 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Quản lí sản phẩm</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta content="Responsive bootstrap 4 admin template" name="description" />
+    <meta content="Coderthemes" name="author" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- App favicon -->
+    <link href="https://img.cdn.vncdn.io/cdn-pos/f8f19b-53936/store/20190718_dMIPi931p7zUMwwzEZleqdMk.png" rel="icon"
+        type="image/vnd.microsoft.icon" />
+
+    <!-- App css -->
+    <link href="assets\css\bootstrap.min.css" rel="stylesheet" type="text/css" id="bootstrap-stylesheet" />
+    <link href="assets\css\icons.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets\css\app.min.css" rel="stylesheet" type="text/css" id="app-stylesheet" />
+    <link rel="stylesheet" href="../css/style2.css">
+</head>
+
+<body>
+    <!-- Begin page -->
+    <div id="wrapper">
+        <!-- Topbar Start -->
+        <div class="navbar-custom" style="background-color: #174195;">
+
+            <!-- LOGO -->
+            <div class="logo-box">
+                <div class="logo">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="29" viewBox="0 0 25 29" fill="none">
+                        <path
+                            d="M3.56348 22.9H24.5V0.5H3.5057C1.57228 0.506417 0.00635613 2.08725 0 4.03908V24.6646H0.00057783C0.00057783 24.6733 0 24.6821 0 24.6908C0 26.7558 1.60521 28.5 3.5057 28.5H24.5V26.6333H3.5057C2.63895 26.6333 1.84906 25.7076 1.84906 24.6908C1.84906 23.7202 2.63433 22.9 3.56348 22.9ZM5.54717 2.38592H11.0943V12.4671L8.29764 9.9885L5.54717 12.4525V2.38592ZM1.84906 4.05367C1.84617 3.12617 2.58695 2.37192 3.5057 2.36667H3.69811H5.54717H3.69811V14.9667H5.52637L8.30458 12.4782L11.1117 14.9667H12.9434V2.36667H22.6509V21.0333H5.55179H3.70274H3.56348C2.96196 21.0333 2.37141 21.192 1.84963 21.493V4.05367H1.84906Z"
+                            fill="#FFCA42" />
+                    </svg>
+                    <p>FUTURER BOOK</p>
+                </div>
+            </div>
+        </div>
+        <div class="left-side-menu" style="background-color: #174195;">
+            <div class="slimscroll-menu">
+                <!--- Sidemenu -->
+                <div id="sidebar-menu">
+                    <ul class="metismenu" id="side-menu">
+                        <li class="menu-title" style="color: #fff">Navigation</li>
+                        <li>
+                            <a href="adminProduct.html">
+                                <i class="mdi mdi-view-dashboard" style="color: #fff"></i>
+                                <span style="color:#fff; font-weight: 500;"> Quản lí sản phẩm </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="adminCategory.html">
+                                <i class="mdi mdi-view-dashboard" style="color: #fff"></i>
+                                <span style="color:#fff; font-weight: 500;"> Quản Lí Phân Loại </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="adminUser.html">
+                                <i class="fa-solid fa-user" style="color: #fff"></i>
+                                <span style="color:#fff; font-weight: 500;"> Quản lí người dùng </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="quanlydonhang.html">
+                                <i class="fa-solid fa-cart-shopping" style="color: #fff"></i>
+                                <span style="color:#fff; font-weight: 500;"> Quản lí đơn hàng </span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- End Sidebar -->
+            </div>
+            <!-- Sidebar -left -->
+        </div>
+        <div class="content-page">
+            <div class="content">
+                <!-- Start Content-->
+                <div class="container-fluid">
+                    <!-- start page title -->
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="page-title-box">
+                                <h4 class="page-title" style=" font-size: 40px;">Quản lí sản phẩm</h4>
+                            </div>
+                            <h4>Tìm kiếm sản phẩm</h4>
+                            <input type="text" name="" id="searchProduct" />
+                            <button onchange="searchButton()">Search</button><br><br><br>
+                            <table id="tableSearch"></table>
+                            <div class="product">
+                                <div class="crud">
+                                    <h3>Thông tin sản phẩm</h3>
+                                    <table style="font-size: 16px; color: #000000">
+                                        <tr>
+                                            <td style="padding-bottom: 20px">Tên sản phẩm</td><br>
+                                            <td style="padding-bottom: 20px">
+                                                <input type="text" id="nameProduct"
+                                                    style="outline: none; width: 250px" />
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td style="padding-bottom: 20px">
+                                                <select id="categorySelect" name="category">
+
+                                                </select>
+                                        </tr>
+
+                                        <tr>
+                                            <td style="padding-bottom: 20px">
+                                                <label for="imgProduct">Ảnh sản phẩm</label>
+                                            </td>
+                                            <td style="padding-bottom: 20px">
+                                                <input type="file" id="imgProduct" style="outline: none; width: 250px"
+                                                    onchange="changeImage()" hidden />
+                                                <img id="image" src="" alt="" width="100px" height="100px" />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="padding-bottom: 20px">Giá sản phẩm</td>
+                                            <td style="padding-bottom: 20px">
+                                                <input type="number" id="priceProduct"
+                                                    style="outline: none; width: 250px" />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="padding-bottom: 20px">Số lượng</td>
+                                            <td style="padding-bottom: 20px">
+                                                <input type="number" id="sl" style="outline: none; width: 250px" />
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <div class="buttonSave">
+                                        <button class="btn btn-success" onclick="add()">
+                                            Save
+                                        </button>
+                                        <button class="btn btn-success" onclick="update()">Chỉnh sửa</button>
+                                    </div>
+                                </div>
+                                <div class="productAdded">
+                                    <h3>Sản phẩm đã được thêm</h3>
+                                    <table id="tableAdded" style="text-align: center; font-size: 20px; " border="1"
+                                        cellpadding="10px" cellspacing="10px">
+                                        <thead>
+                                            <tr>
+                                                <th>ID</th>
+                                                <th>Ten</th>
+                                                <th>Anh</th>
+                                                <th>Phan Loai</th>
+                                                <th>Gia</th>
+                                                <th>So luong</th>
+                                                <th>Action</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="table_body"></tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer class="footer">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-9">
+                            Quang Hao
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+
+        <script src="./js/adminProduct.js"></script>
+</body>
+
+</html>

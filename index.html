@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cardo&family=Dancing+Script:wght@700&family=Inter:wght@400;500;700;800&family=Poppins&family=Roboto:ital,wght@0,300;1,500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/style2.css">
+    <title>Future Book</title>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="29" viewBox="0 0 25 29" fill="none">
+                    <path
+                        d="M3.56348 22.9H24.5V0.5H3.5057C1.57228 0.506417 0.00635613 2.08725 0 4.03908V24.6646H0.00057783C0.00057783 24.6733 0 24.6821 0 24.6908C0 26.7558 1.60521 28.5 3.5057 28.5H24.5V26.6333H3.5057C2.63895 26.6333 1.84906 25.7076 1.84906 24.6908C1.84906 23.7202 2.63433 22.9 3.56348 22.9ZM5.54717 2.38592H11.0943V12.4671L8.29764 9.9885L5.54717 12.4525V2.38592ZM1.84906 4.05367C1.84617 3.12617 2.58695 2.37192 3.5057 2.36667H3.69811H5.54717H3.69811V14.9667H5.52637L8.30458 12.4782L11.1117 14.9667H12.9434V2.36667H22.6509V21.0333H5.55179H3.70274H3.56348C2.96196 21.0333 2.37141 21.192 1.84963 21.493V4.05367H1.84906Z"
+                        fill="#FFCA42" />
+                </svg>
+                <p>FUTURER BOOK</p>
+            </div>
+            <div class="menu">
+                <a href="index.html">Home</a>
+                <a href="product.html">Product</a>
+                <a href="#">About</a>
+                <a href="#">Contact</a>
+                <div class="search">
+                    <label>
+                        <input type="text" placeholder="Search ID Order" oninput="searchId()" id="search" />
+                        <ion-icon name="search-outline"></ion-icon>
+                    </label>
+                </div>
+                <div class="cart" id="cart">
+                    <a href="./cart.html">
+                        <span onclick="change()" style="border: none; color: #FFCA42; cursor: pointer;"
+                            class="material-symbols-outlined">
+                            shopping_cart
+                        </span>
+                        <span id="total_order">0</span>
+                    </a>
+                </div>
+                <div>
+                    <span onclick="toggleMenu()"
+                        style="color: #FFCA42; cursor: pointer;z-index: 100;position: absolute;top: 20px;"
+                        class="material-symbols-outlined">
+                        account_circle
+                    </span>
+                </div>
+
+                <ul id="menu_info" class="hidden" onmouseout="hiddena()" onmouseover="visible()">
+                    <li><a href="./login.html">Đăng nhập</a></li>
+                    <li><a href="./register.html">Đăng ký</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <!-- ****************************************************************************** -->
+    <main>
+        <div class="content">
+            <div class="line">
+                <span class="material-symbols-outlined myClass">
+                    maximize
+                </span>
+                <p>Welcome to Pages</p>
+            </div><br><br><br>
+            <h1>Books are uniquely<br>
+                portable magic</h1><br><br><br>
+            <p class="item">There are many variations of passages of Lorem Ipsum available,<br> but the majority have
+                suffered
+                alteration in some form.</p><br><br>
+            <div class="click">
+                <button class="btn">Order Today</button>
+                <a href="#">Read Free Demo</a>
+            </div>
+            <img src="./img/book1.png" alt="book1"><br><br><br>
+            <div class="elipClick">
+                <div class="elip">
+                    <div class="elip__one">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17" fill="none">
+                            <circle cx="8" cy="8.5" r="8" fill="#FFCA42" />
+                        </svg>
+                        <div class="elip__contentone">
+                            <h2>Pages:</h2>
+                            <p>586 pages</p>
+                        </div>
+                    </div>
+                    <div class="elip__two">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17" fill="none">
+                            <circle cx="8" cy="8.5" r="8" fill="#FFCA42" />
+                        </svg>
+                        <div class="elip__contenttwo">
+                            <h2>Length:</h2>
+                            <p>10 Hours</p>
+                        </div>
+                    </div>
+                    <div class="elip__three">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17" fill="none">
+                            <circle cx="8" cy="8.5" r="8" fill="#FFCA42" />
+                        </svg>
+                        <div class="elip__contentthree">
+                            <h2>Ratings:</h2>
+                            <p>4.5/5 (305 ratings)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- *************** -->
+        <div class="about">
+            <h2>Author's Book Includes</h2>
+            <div class="lineheight"></div>
+            <div class="total">
+                <div class="total__one">
+                    <img src="./img/book2.png" class="shadow p-0 mb-5 bg-body rounded" alt="book2"
+                        style="width: 300px; height: 400px;">
+                    <div class="Contact__one">
+                        <h3>Atomic One's</h3><br>
+                        <p>Many variations of passages<br>of Lorem Ipsum willing araise<br>alteration in some form.</p>
+                        <div class="elip__me">
+                            <div class="elip__1">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17"
+                                    fill="none">
+                                    <circle cx="8" cy="8.5" r="8" fill="#FFCA42" />
+                                </svg>
+                                <div class="elip__content1">
+                                    <h4>Pages:</h4>
+                                    <p>586 pages</p>
+                                </div>
+                            </div>
+                            <div class="elip__2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17"
+                                    fill="none">
+                                    <circle cx="8" cy="8.5" r="8" fill="#FFCA42" />
+                                </svg>
+                                <div class="elip__content2">
+                                    <h4>Length:</h4>
+                                    <p>10 Hours</p>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="btn">Order Today</button>
+                    </div>
+
+                </div>
+                <div class="total__two">
+                    <img src="./img/book1.png" class="shadow p-0 mb-5 bg-body rounded" alt="book2"
+                        style="width: 300px; height: 400px;">
+                    <div class="Contact__two">
+                        <h3>The Dark Light</h3><br>
+                        <p>Many variations of passages<br>of Lorem Ipsum willing araise<br>alteration in some form.</p>
+                        <div class="elip__you">
+                            <div class="elip__3">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17"
+                                    fill="none">
+                                    <circle cx="8" cy="8.5" r="8" fill="#FFCA42" />
+                                </svg>
+                                <div class="elip__content1">
+                                    <h4>Pages:</h4>
+                                    <p>586 pages</p>
+                                </div>
+                            </div>
+                            <div class="elip__4">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17"
+                                    fill="none">
+                                    <circle cx="8" cy="8.5" r="8" fill="#FFCA42" />
+                                </svg>
+                                <div class="elip__content2">
+                                    <h4>Length:</h4>
+                                    <p>10 Hours</p>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="btn">Order Today</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- ************************ -->
+
+        <div class="About__Author"><br>
+            <div class="Author_content">
+                <div class="john">
+                    <img class="shadow p-0 mb-5 bg-body rounded" src="./img/John.png" alt="John">
+                    <div class="rectangle"></div>
+                </div>
+                <div class="john__content">
+                    <h2>About Author</h2>
+                    <div class="line1"></div><br>
+                    <p>All the Lorem Ipsum generators on the Internet tend to repeated<br>predefined chunks as
+                        necessary, making this the first
+                        true value<br>generator on the Internet. It uses a dictionary of over 200 Latin<br>words,
+                        combined with a handful.</p><br>
+                    <div class="parameter">
+                        <div class="parameter__one">
+                            <h2>02</h2>
+                            <p>Books Published</p>
+                        </div>
+                        <div class="parameter__two">
+                            <h2>4.5</h2>
+                            <p>User Reviews</p>
+                        </div>
+                        <div class="parameter__three">
+                            <h2>04</h2>
+                            <p>Best Seller Awards</p>
+                        </div><br>
+                    </div>
+                    <div class="personal">
+                        <img src="./img/Image.png" alt="QR">
+                        <div class="nameall">
+                            <div class="name">John Abraham , Ph.d</div>
+                            <p>Mail : johnabraham@gmail.com<br>
+                                Phone : (+2) 123 545 9000</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- *********************************** -->
+
+        <div class="trusted">
+            <h2>Trusted by the Best</h2><br>
+            <div class="line2"></div><br><br>
+            <img src="./img/trusted.png" alt="trust">
+        </div>
+    </main>
+
+    <footer class="text-center text-lg-start text-white">
+        <div class="content_f">
+            <div class="main_1">
+                <div class="logo">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="29" viewBox="0 0 25 29" fill="none">
+                        <path
+                            d="M3.56348 22.9H24.5V0.5H3.5057C1.57228 0.506417 0.00635613 2.08725 0 4.03908V24.6646H0.00057783C0.00057783 24.6733 0 24.6821 0 24.6908C0 26.7558 1.60521 28.5 3.5057 28.5H24.5V26.6333H3.5057C2.63895 26.6333 1.84906 25.7076 1.84906 24.6908C1.84906 23.7202 2.63433 22.9 3.56348 22.9ZM5.54717 2.38592H11.0943V12.4671L8.29764 9.9885L5.54717 12.4525V2.38592ZM1.84906 4.05367C1.84617 3.12617 2.58695 2.37192 3.5057 2.36667H3.69811H5.54717H3.69811V14.9667H5.52637L8.30458 12.4782L11.1117 14.9667H12.9434V2.36667H22.6509V21.0333H5.55179H3.70274H3.56348C2.96196 21.0333 2.37141 21.192 1.84963 21.493V4.05367H1.84906Z"
+                            fill="#FFCA42" />
+                    </svg>
+                    <p>FUTURER BOOK</p>
+                </div>
+                <div class="col-md-5 col-lg-4 ml-lg-0 text-center text-md-end" style="display: flex;">
+                    <!-- Facebook -->
+                    <a class="btn btn-outline-light btn-floating m-1" class="text-white" role="button"><i
+                            class="fab fa-facebook"></i></a>
+                
+                    <!-- Twitter -->
+                    <a class="btn btn-outline-light btn-floating m-1" class="text-white" role="button"><i
+                            class="fab fa-twitter"></i></a>
+                
+                    <!-- Google -->
+                    <a class="btn btn-outline-light btn-floating m-1" class="text-white" role="button"><i class="fab fa-google"></i></a>
+                
+                    <!-- Instagram -->
+                    <a class="btn btn-outline-light btn-floating m-1" class="text-white" role="button"><i
+                            class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="main_2">
+                <h4>Explore</h4>
+                <ul>
+                    <li>Home</li>
+                    <li>Product</li>
+                    <li>About</li>
+                    <li>Contact</li>
+                </ul>
+            </div>
+
+            <div class="main_3">
+                <h4>Utility Pages</h4>
+                <ul>
+                    <li>Start here</li>
+                    <li>Style guide</li>
+                    <li>Password protected</li>
+                    <li>Licenses</li>
+                    <li>Changelog</li>
+                </ul>
+            </div>
+
+            <div class="main_4">
+                <h4>Keep in Touch</h4>
+                <ul>
+                    <li>Address : 24A Kingston St, Los Vegas<br> NC 28202, USA.</li>
+                    <li>Mail : support@doctors.com</li>
+                    <li>Phone : (+22) 123 - 4567 - 900</li>
+                </ul>
+            </div>
+        </div>
+        <hr class="my-3 w-75 m-auto">
+        <div class="col-md-7 col-lg-12 text-center text-md-center">
+            <!-- Copyright -->
+            <div class="p-1">
+                © Drafted by ProductBook - Powered by babyHao
+            </div>
+            <!-- Copyright -->
+        </div>
+    </footer>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+
+</html>

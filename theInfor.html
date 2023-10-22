@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cardo&family=Dancing+Script:wght@700&family=Inter:wght@400;500;700;800&family=Poppins&family=Roboto:ital,wght@0,300;1,500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="../css/product.css">
+    <link rel="stylesheet" href="./css/style2.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="29" viewBox="0 0 25 29" fill="none">
+                    <path
+                        d="M3.56348 22.9H24.5V0.5H3.5057C1.57228 0.506417 0.00635613 2.08725 0 4.03908V24.6646H0.00057783C0.00057783 24.6733 0 24.6821 0 24.6908C0 26.7558 1.60521 28.5 3.5057 28.5H24.5V26.6333H3.5057C2.63895 26.6333 1.84906 25.7076 1.84906 24.6908C1.84906 23.7202 2.63433 22.9 3.56348 22.9ZM5.54717 2.38592H11.0943V12.4671L8.29764 9.9885L5.54717 12.4525V2.38592ZM1.84906 4.05367C1.84617 3.12617 2.58695 2.37192 3.5057 2.36667H3.69811H5.54717H3.69811V14.9667H5.52637L8.30458 12.4782L11.1117 14.9667H12.9434V2.36667H22.6509V21.0333H5.55179H3.70274H3.56348C2.96196 21.0333 2.37141 21.192 1.84963 21.493V4.05367H1.84906Z"
+                        fill="#FFCA42" />
+                </svg>
+                <p>FUTURER BOOK</p>
+            </div>
+            <div class="menu">
+                <a href="index.html">Home</a>
+                <a href="product.html">Product</a>
+                <a href="#">About</a>
+                <a href="#">Contact</a>
+                <div class="search">
+                    <label>
+                        <input type="text" placeholder="Search ID Order" oninput="searchId()" id="search" />
+                        <ion-icon name="search-outline"></ion-icon>
+                    </label>
+                </div>
+                <div class="cart" id="cart">
+                    <a href="./cart.html">
+                        <span onclick="change()" style="border: none; color: #FFCA42; cursor: pointer;"
+                            class="material-symbols-outlined">
+                            shopping_cart
+                        </span>
+                        <span id="total_order">0</span>
+                    </a>
+                </div>
+                <div> <span onclick="toggleMenu()"
+                        style="color: #FFCA42; cursor: pointer;z-index: 100;position: absolute;top: 20px;"
+                        class="material-symbols-outlined">
+                        account_circle
+                    </span>
+                </div>
+    
+                <ul id="menu_info" class="hidden" onmouseout="hiddena()" onmouseover="visible()">
+                    <li><a href="./login.html">Đăng nhập</a></li>
+                    <li><a href="./register.html">Đăng ký</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <div class="title">
+        <h1>My Product</h1><br>
+        <div class="line3"></div><br>
+        <p>There are many variations of passages of Lorem Ipsum available, have<br>
+            suffered alteration in some form.</p>
+    </div>
+
+    <div class="theInfor">
+        <div class="infor">
+            <div class="infor_image">
+                <img id="imgInfor" >
+                <div><br>
+                    <h4 id="nameInfor"></h4><br>
+                    <h5 id="priceInfor"></h5><br>
+                    <p>Making this the first true generator on the Internet. It uses a dictionary<br>
+                        of over 200 Latin words, combined with a handful of model sentence<br>
+                        structures, to generate Lorem Ipsum which looks reasonable. The<br>
+                        generated Lorem Ipsum.</p><br>
+                    <table>
+                        <tr>
+                            <td>Publisher</td>
+                            <td>:</td>
+                            <td>Learning Private Limited (1 January 2021)</td>
+                        </tr>
+                        <tr>
+                            <td>Language</td>
+                            <td>:</td>
+                            <td>English</td>
+                        </tr>
+                        <tr>
+                            <td>Paperback</td>
+                            <td>:</td>
+                            <td>212 pages</td>
+                        </tr>
+                        <tr>
+                            <td>ISBN-10</td>
+                            <td>:</td>
+                            <td>9788120345799</td>
+                        </tr>
+                        <tr>
+                            <td>Dimensions</td>
+                            <td>:</td>
+                            <td>20 x 14 x 4 cm</td>
+                        </tr>
+
+
+                    </table>
+                    <button onclick="addToCart()">Add to cart</button>
+                </div>
+            </div>
+            <div class="alway">
+                <button>PRODUCT DESCRIPTION</button>
+                <button>ADDITIONAL</button>
+            </div><br>
+            <div class="information">
+                <div class="infomation1">
+                    <h4>Do you offer discounts for education?</h4>
+                    <p>
+                        There are many variations of passages of Lorem Ipsum available,
+                        but the majority have suffered alteration in some form,
+                        bypassed injected humour, or randomised words which don't look
+                        even slightly believable.
+                </div>
+                <div class="information2">
+                    <h4>Is this book for me?</h4>
+                    <p>
+                        If you are going to use a passage of Lorem Ipsum, you need to 
+                        be sure there isn't anything embarrassing hidden in the
+                        middle of text. All the Lorem Ipsum generators on the Internet
+                        tend to repeat predefined chunks as necessary.
+                </div>
+                </p>
+            </div>
+        </div>
+        <div class="theInfors">
+            <div class="secureti">
+                <div class="secure">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 38 38" fill="none">
+                        <path d="M25.9232 12.0769L16.3346 23.1539L12.0769 18.9827" stroke="white" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        <path
+                            d="M36.9224 6.57054C29.1841 5.18245 25.9847 4.15436 19.0001 1C12.0155 4.15436 8.81616 5.18245 1.07781 6.57054C-0.324127 28.7904 17.6657 36.463 19.0001 37.0004C20.3345 36.463 38.3243 28.7904 36.9224 6.57054Z"
+                            stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    
+                </div><br>
+                <h4>Secure Payments</h4>
+                <p>There are many variations of passages of<br>
+                alteration in some form.</p>
+            </div>
+            <div class="secureti">
+                <div class="secure">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="44" viewBox="0 0 40 44" fill="none">
+                        <path
+                            d="M39 30.7789V13.8808C38.9993 13.3277 38.8538 12.7844 38.5779 12.3051C38.302 11.8257 37.9054 11.427 37.4276 11.1485L22.3859 2.39468C21.6612 1.97277 20.8376 1.75049 19.999 1.75049C19.1604 1.75049 18.3368 1.97277 17.6121 2.39468L2.57245 11.1485C2.09457 11.427 1.69795 11.8257 1.42207 12.3051C1.14619 12.7844 1.00067 13.3277 1 13.8808V30.7789C1.00033 31.3323 1.14568 31.876 1.42158 32.3557C1.69748 32.8354 2.09428 33.2345 2.57245 33.5131L17.6141 42.267C18.339 42.6883 19.1625 42.9102 20.001 42.9102C20.8394 42.9102 21.663 42.6883 22.3879 42.267L37.4295 33.5131C37.9073 33.2343 38.3037 32.8351 38.5793 32.3554C38.8548 31.8756 38.9999 31.3321 39 30.7789Z"
+                            stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M19.9997 23.1215V42.9132M19.9997 23.1215L1.98926 12.6824M19.9997 23.1215L38.7028 12.6824" stroke="white"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+            
+                </div><br>
+                <h4>Free Shipping</h4>
+                <p>There are many variations of passages of<br>
+                    alteration in some form.</p>
+            </div>
+            <div class="secureti">
+                <div class="secure">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="45" viewBox="0 0 32 45" fill="none">
+                        <path
+                            d="M21.5569 1.49317L1 26.8998H13.0002L10.0461 43.1404C10.0405 43.1723 10.0419 43.205 10.0503 43.2362C10.0587 43.2675 10.0738 43.2965 10.0947 43.3213C10.1155 43.346 10.1415 43.3659 10.1708 43.3796C10.2002 43.3932 10.2322 43.4002 10.2645 43.4001V43.4001C10.299 43.4001 10.3329 43.392 10.3637 43.3765C10.3944 43.3611 10.4212 43.3387 10.4417 43.311L31.0005 17.8997H19.0003L21.9685 1.65723C21.9725 1.62487 21.9695 1.59203 21.9598 1.5609C21.9502 1.52977 21.934 1.50105 21.9123 1.47666C21.8907 1.45227 21.8641 1.43277 21.8343 1.41945C21.8046 1.40613 21.7723 1.3993 21.7397 1.39942V1.39942C21.704 1.39956 21.6689 1.40812 21.6371 1.42441C21.6053 1.4407 21.5778 1.46426 21.5569 1.49317V1.49317Z"
+                            stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+            
+                </div><br>
+                <h4>100% Satisfactions</h4>
+                <p>There are many variations of passages of<br>
+                    alteration in some form.</p>
+            </div>
+        </div>
+    </div>
+
+    <!--Footer  -->
+    <footer class="text-center text-lg-start text-white" style="background-color: #174195; margin-top: 100px;">
+        <!-- Grid container -->
+        <div class="container p-4 pb-0">
+            <!-- Section: Links -->
+            <section class="">
+                <!--Grid row-->
+                <div class="row">
+                    <!-- Grid column -->
+                    <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                        <h6 class="text-uppercase mb-4 font-weight-bold">
+                            Truy cập nhanh
+                        </h6>
+                        <p>
+                            Trang chủ
+                        </p>
+                        <p>Giới thiệu </p>
+                        <p>Trung tâm trợ giúp</p>
+
+                    </div>
+                    <!-- Grid column -->
+
+                    <hr class="w-100 clearfix d-md-none" />
+
+                    <!-- Grid column -->
+                    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                        <h6 class="text-uppercase mb-4 font-weight-bold">Về Future Book</h6>
+                        <p>
+                            <a class="text-white">Điều khoản dịch vụ </a>
+                        </p>
+                        <p>
+                            <a class="text-white">Chính sách bảo mật</a>
+                        </p>
+                        <p>
+                            <a class="text-white">Quy trình giải quyết khiếu nại</a>
+                        </p>
+                    </div>
+                    <!-- Grid column -->
+
+                    <hr class="w-100 clearfix d-md-none" />
+
+                    <!-- Grid column -->
+                    <hr class="w-100 clearfix d-md-none" />
+
+                    <!-- Grid column -->
+                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                        <h6 class="text-uppercase mb-4 font-weight-bold">Liên hệ</h6>
+                        <p><i class="fas fa-home mr-3"></i> Hotline & chat trực tuyến (24/7)</p>
+                        <p><i class="fas fa-envelope mr-3"></i> FutureBook@stripe-vn.com</p>
+                        <p><i class="fas fa-phone mr-3"></i> 0867209875</p>
+                        <p><i class="fas fa-print mr-3"></i> 0559094006</p>
+                    </div>
+                    <!-- Grid column -->
+                </div>
+                <!--Grid row-->
+            </section>
+            <!-- Section: Links -->
+
+            <hr class="my-3">
+
+            <!-- Section: Copyright -->
+            <section class="p-3 pt-0">
+                <div class="row d-flex align-items-center">
+                    <!-- Grid column -->
+                    <div class="col-md-7 col-lg-8 text-center text-md-start">
+                        <!-- Copyright -->
+                        <div class="p-3">
+                            © 2024 Copyright:
+                            <a class="text-white" href="#">FutureBook.com</a>
+                        </div>
+                        <!-- Copyright -->
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-5 col-lg-4 ml-lg-0 text-center text-md-end">
+                        <!-- Facebook -->
+                        <a class="btn btn-outline-light btn-floating m-1" class="text-white" role="button"><i
+                                class="fab fa-facebook-f"></i></a>
+
+                        <!-- Twitter -->
+                        <a class="btn btn-outline-light btn-floating m-1" class="text-white" role="button"><i
+                                class="fab fa-twitter"></i></a>
+
+                        <!-- Google -->
+                        <a class="btn btn-outline-light btn-floating m-1" class="text-white" role="button"><i
+                                class="fab fa-google"></i></a>
+
+                        <!-- Instagram -->
+                        <a class="btn btn-outline-light btn-floating m-1" class="text-white" role="button"><i
+                                class="fab fa-instagram"></i></a>
+                    </div>
+                    <!-- Grid column -->
+                </div>
+            </section>
+            <!-- Section: Copyright -->
+        </div>
+        <!-- Grid container -->
+    </footer>
+    <!-- Footer -->
+    <script src="./js/detail.js"></script>
+    <script src="./js/index.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html> 

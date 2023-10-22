@@ -1,0 +1,45 @@
+.login {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-right: 100px;
+}
+
+.signup_content .ten {
+    color: #000000;
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.signup_content h2 {
+    margin-left: 100px;
+    letter-spacing: 1px;
+    font-style: bold;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.signup_content h3 {
+    margin-left: 100px;
+    letter-spacing: 1px;
+    font-style: bold;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.sign_up input {
+    width: 392px;
+    height: 62.667px;
+    border-radius: 4px;
+    background: #F0EFFF;
+    padding-left: 25px;
+}
+
+form button {
+    width: 421px;
+    height: 62.667px;
+    background: #FFCA42;
+    box-shadow: 0px 4px 61px 0px rgba(77, 71, 195, 0.40);
+    border-radius: 4px;
+}
